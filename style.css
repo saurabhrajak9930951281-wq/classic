@@ -170,10 +170,12 @@ textarea { resize: vertical; }
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
-  height: var(--nav-h);
-  min-height: var(--nav-h);
+  padding-top: env(safe-area-inset-top, 0px);
+  height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+  min-height: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
   z-index: 1000;
   background: rgba(254,254,254,0.97);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   transition: box-shadow var(--transition);
@@ -200,6 +202,7 @@ textarea { resize: vertical; }
 .logo-mark {
   font-size: 1.1rem;
   color: var(--gold);
+  flex-shrink: 0;
 }
 .logo-text {
   font-family: var(--font-serif);
@@ -211,7 +214,6 @@ textarea { resize: vertical; }
   line-height: 1.15;
   justify-content: center;
 }
-/* Explicit span ensures "Classic Dishes" is a real flex item in all mobile browsers */
 .logo-name {
   display: block;
   font-size: 1.1rem;
@@ -1327,16 +1329,31 @@ a.cc-value:hover { color: var(--gold); }
 @media (max-width: 768px) {
   :root { --nav-h: 68px; }
 
+  /* ── LOGO: single horizontal row on mobile ──
+     Eliminates the two-line column stack. Both "Classic Dishes"
+     and "Pvt Ltd" now live on the same line so the browser chrome
+     can never hide one while showing the other. */
+  .logo { gap: 0.4rem; }
+  .logo-mark { font-size: 1rem; }
+  .logo-text {
+    flex-direction: row;   /* KEY FIX: row instead of column */
+    align-items: baseline;
+    gap: 0.35em;
+  }
+  .logo-name {
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .logo-text em {
+    font-size: 0.78rem;
+    opacity: 0.75;
+  }
+
   /* Nav */
   .hamburger { display: flex; }
-  .logo { gap: 0.35rem; }
-  .logo-name { font-size: 0.98rem; }
-  .logo-text { font-size: 0.98rem; }
-  .logo-text em { font-size: 0.65rem; }
-  .logo-mark { font-size: 1rem; }
   .main-nav {
     position: fixed;
-    top: var(--nav-h);
+    top: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
     left: 0; right: 0;
     background: var(--white);
     flex-direction: column;
@@ -1358,13 +1375,21 @@ a.cc-value:hover { color: var(--gold); }
   }
   .main-nav .nav-cta { text-align: center; }
 
-  /* Hero */
-  .hero { padding-top: var(--nav-h); min-height: 100svh; }
+  /* Hero — push down by full header height including safe area */
+  .hero {
+    padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+    min-height: 100svh;
+  }
   .hero-content { padding: 2rem 1.25rem; }
   .hero-title { font-size: clamp(2.4rem, 9vw, 3.2rem); }
   .hero-sub { font-size: 0.95rem; margin-bottom: 2rem; }
   .hero-ctas { flex-direction: column; gap: 0.6rem; }
   .hero-ctas .btn { width: 100%; justify-content: center; padding: 1rem 1.5rem; }
+
+  /* Page mini heroes */
+  .page-hero-mini {
+    padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + 2.5rem);
+  }
 
   /* Sections */
   .section-pad { padding: 3rem 0; }
@@ -1422,12 +1447,13 @@ a.cc-value:hover { color: var(--gold); }
   .review-row span:last-child { color: var(--gold); font-weight: 500; }
   .contact-card { flex-direction: column; }
   .btn-row { flex-wrap: wrap; }
-  .page-hero-mini { padding-top: calc(var(--nav-h) + 2rem); }
+  .page-hero-mini {
+    padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + 2rem);
+  }
 
-  /* Logo: single line on very small screens */
-  .logo-text { flex-direction: row; align-items: baseline; gap: 0.3rem; }
-  .logo-name { font-size: 0.92rem; }
-  .logo-text em { font-size: 0.72rem; }
+  /* Logo: slightly smaller on tiny screens (still single row from 768px rule) */
+  .logo-name { font-size: 0.9rem; }
+  .logo-text em { font-size: 0.7rem; }
 
   /* Pillar icons smaller */
   .pillar { padding: 1.25rem 0.85rem; }
