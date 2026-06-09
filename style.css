@@ -34,6 +34,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
+  margin: 0;
+  padding: 0;
   font-family: var(--font-sans);
   color: var(--text);
   background: var(--white);
@@ -168,6 +170,7 @@ textarea { resize: vertical; }
    NAV
 ══════════════════════════════════ */
 .site-header {
+  padding-top: 20px;
   position: fixed;
   top: 0; left: 0; right: 0;
   padding-top: env(safe-area-inset-top, 0px);
@@ -1358,7 +1361,8 @@ a.cc-value:hover { color: var(--gold); }
     background: var(--white);
     flex-direction: column;
     padding: 1.5rem 1.25rem 2rem;
-    gap: 0.25rem;
+    /* 18.5rem 1.25rem 2rem */
+    gap: 2.25rem;
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow-md);
     transform: translateY(-110%);
@@ -1452,7 +1456,7 @@ a.cc-value:hover { color: var(--gold); }
   }
 
   /* Logo: slightly smaller on tiny screens (still single row from 768px rule) */
-  .logo-name { font-size: 0.9rem; }
+  .logo-name { font-size: 1.9rem; }
   .logo-text em { font-size: 0.7rem; }
 
   /* Pillar icons smaller */
