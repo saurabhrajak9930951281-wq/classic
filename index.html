@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classic Dishes Pvt Ltd — Premium Catering</title>
+  <meta name="description" content="Classic Dishes Pvt Ltd — Premium event catering, wedding catering, buffet services and corporate catering in Mumbai." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-inner">
+        <a href="#home" class="logo" onclick="showPage('home')">
+        <span class="logo-mark">✦</span>
+        <span class="logo-text"><span class="logo-name">Classic Dishes</span><em>Pvt Ltd</em></span>
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <a href="#" onclick="showPage('home')" data-page="home">Home</a>
+        <a href="#" onclick="showPage('menu')" data-page="menu">Menu</a>
+        <a href="#" onclick="showPage('services')" data-page="services">Services</a>
+        <a href="#" onclick="showPage('gallery')" data-page="gallery">Gallery</a>
+        <a href="#" onclick="showPage('order')" data-page="order" class="nav-cta">Book Event</a>
+        <a href="#" onclick="showPage('contact')" data-page="contact">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ═══════════ PAGE: HOME ═══════════ -->
+  <main id="page-home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+        <!-- REPLACE: Add a high-res catering/food photo as hero background -->
+        <div class="hero-placeholder-bg"></div>
+      </div>
+      <div class="hero-content container">
+        <p class="hero-eyebrow">Mumbai's Finest Catering</p>
+        <h1 class="hero-title">Every Occasion,<br /><em>Perfectly Served.</em></h1>
+        <p class="hero-sub">From intimate gatherings to grand celebrations — we craft flavours that linger, and memories that last.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-gold" onclick="showPage('order')">Book Event Catering</button>
+          <button class="btn btn-outline" onclick="showPage('menu')">View Menu</button>
+          <button class="btn btn-ghost" onclick="showPage('contact')">Contact Us</button>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us section-pad">
+      <div class="container">
+        <div class="section-label">Why Classic Dishes</div>
+        <h2 class="section-title">A Legacy of <em>Taste & Trust</em></h2>
+        <div class="pillars-grid">
+          <div class="pillar fade-in">
+            <div class="pillar-icon">🍽️</div>
+            <h3>Authentic Flavours</h3>
+            <p>Recipes crafted with tradition and pride, using the freshest locally sourced ingredients.</p>
+          </div>
+          <div class="pillar fade-in">
+            <div class="pillar-icon">👨‍🍳</div>
+            <h3>Expert Chefs</h3>
+            <p>Seasoned culinary professionals who treat every event as their masterpiece.</p>
+          </div>
+          <div class="pillar fade-in">
+            <div class="pillar-icon">📋</div>
+            <h3>Structured Service</h3>
+            <p>Bulk catering with discipline — minimum quantities, proper scheduling, zero chaos.</p>
+          </div>
+          <div class="pillar fade-in">
+            <div class="pillar-icon">🏆</div>
+            <h3>Trusted Since Years</h3>
+            <p>Hundreds of weddings, corporate events, and festivals served with consistency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview section-pad bg-cream">
+      <div class="container">
+        <div class="section-label">What We Offer</div>
+        <h2 class="section-title">Our <em>Specialities</em></h2>
+        <div class="services-grid">
+          <div class="service-card fade-in" onclick="showPage('services')">
+            <div class="service-img service-img--wedding">
+              <!-- REPLACE: wedding catering image -->
+              <div class="service-img-placeholder">💍</div>
+            </div>
+            <div class="service-card-body">
+              <h3>Wedding Catering</h3>
+              <p>Grand feasts crafted for your most special day. Multi-course menus, live counters, and full-event support.</p>
+              <span class="card-link">Explore →</span>
+            </div>
+          </div>
+          <div class="service-card fade-in" onclick="showPage('services')">
+            <div class="service-img service-img--corporate">
+              <div class="service-img-placeholder">🏢</div>
+            </div>
+            <div class="service-card-body">
+              <h3>Corporate Catering</h3>
+              <p>Professional meals for meetings, conferences, and office events. Punctual, presentable, and delicious.</p>
+              <span class="card-link">Explore →</span>
+            </div>
+          </div>
+          <div class="service-card fade-in" onclick="showPage('services')">
+            <div class="service-img service-img--buffet">
+              <div class="service-img-placeholder">🍛</div>
+            </div>
+            <div class="service-card-body">
+              <h3>Buffet Service</h3>
+              <p>Elaborate spreads with 20+ dishes. Minimum 50 packs. Perfect for large gatherings and celebrations.</p>
+              <span class="card-link">Explore →</span>
+            </div>
+          </div>
+          <div class="service-card fade-in" onclick="showPage('services')">
+            <div class="service-img service-img--events">
+              <div class="service-img-placeholder">🎉</div>
+            </div>
+            <div class="service-card-body">
+              <h3>Events Catering</h3>
+              <p>Birthday parties, puja ceremonies, social gatherings — every occasion catered with care.</p>
+              <span class="card-link">Explore →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Teaser -->
+    <section class="gallery-teaser section-pad">
+      <div class="container">
+        <div class="section-label">Our Work</div>
+        <h2 class="section-title">A Glimpse of <em>Flavour</em></h2>
+        <div class="teaser-grid" id="gallery-teaser-grid">
+          <!-- Populated by JS -->
+        </div>
+        <div class="center-btn">
+          <button class="btn btn-outline" onclick="showPage('gallery')">View Full Gallery</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner section-pad">
+      <div class="container">
+        <h2>Ready to Plan Your Event?</h2>
+        <p>Talk to us today — we'll craft a personalised menu for your occasion.</p>
+        <div class="hero-ctas">
+          <button class="btn btn-gold" onclick="showPage('order')">Book Event Now</button>
+          <a class="btn btn-outline" href="https://wa.me/919518959489" target="_blank">WhatsApp Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════ PAGE: MENU ═══════════ -->
+  <main id="page-menu" class="page">
+    <div class="page-hero-mini">
+      <div class="container">
+        <div class="section-label">Our Offerings</div>
+        <h1 class="page-hero-title">The <em>Menu</em></h1>
+        <p>All items priced per 1 kg. Select quantities below.</p>
+      </div>
+    </div>
+
+    <section class="menu-section section-pad">
+      <div class="container">
+        <!-- Veg / Non-Veg Tabs -->
+        <div class="menu-tabs">
+          <button class="menu-tab active" onclick="switchMenuTab('veg', this)">🥦 Veg Menu</button>
+          <button class="menu-tab" onclick="switchMenuTab('nonveg', this)">🍗 Non-Veg Menu</button>
+        </div>
+
+        <div id="menu-veg" class="menu-panel active">
+          <!-- Built by JS -->
+        </div>
+        <div id="menu-nonveg" class="menu-panel">
+          <!-- Built by JS -->
+        </div>
+
+        <!-- Menu selection summary -->
+        <div class="menu-summary-bar" id="menu-summary-bar" style="display:none;">
+          <div class="menu-summary-inner container">
+            <span id="menu-summary-text">0 items selected — ₹0</span>
+            <button class="btn btn-gold btn-sm" onclick="proceedToOrder()">Proceed to Book →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ PAGE: SERVICES ═══════════ -->
+  <main id="page-services" class="page">
+    <div class="page-hero-mini">
+      <div class="container">
+        <div class="section-label">What We Do</div>
+        <h1 class="page-hero-title">Our <em>Services</em></h1>
+      </div>
+    </div>
+
+    <section class="section-pad">
+      <div class="container">
+
+        <div class="service-detail fade-in">
+          <div class="service-detail-icon">💍</div>
+          <div class="service-detail-body">
+            <h2>Wedding Catering</h2>
+            <p>We understand that a wedding is a once-in-a-lifetime event. Our wedding catering service is built around that emotion. From mehendi lunches to grand reception dinners, we handle multi-course menus, live counters, dessert spreads, and everything in between.</p>
+            <ul>
+              <li>Custom bridal menu planning</li>
+              <li>Live chaat, dosa, or pasta counters</li>
+              <li>Full setup and service staff</li>
+              <li>Veg, Non-Veg, Jain options</li>
+            </ul>
+            <p class="service-note">⚠️ Inquiry only — contact us for custom pricing.</p>
+            <button class="btn btn-outline" onclick="showPage('contact')">Make an Enquiry</button>
+          </div>
+        </div>
+
+        <div class="service-detail fade-in reverse">
+          <div class="service-detail-icon">🏢</div>
+          <div class="service-detail-body">
+            <h2>Corporate Catering</h2>
+            <p>Professional, hygienic, and on-time. We cater to office meetings, annual events, product launches, and team celebrations. Our corporate menu is curated for taste and professionalism.</p>
+            <ul>
+              <li>Packaged meal boxes or buffet setup</li>
+              <li>Teas, snacks, and lunch/dinner options</li>
+              <li>Flexible scheduling around your event</li>
+              <li>Bulk pricing for large teams</li>
+            </ul>
+            <p class="service-note">⚠️ Inquiry only — contact us for custom pricing.</p>
+            <button class="btn btn-outline" onclick="showPage('contact')">Make an Enquiry</button>
+          </div>
+        </div>
+
+        <div class="service-detail fade-in">
+          <div class="service-detail-icon">🍛</div>
+          <div class="service-detail-body">
+            <h2>Buffet Service</h2>
+            <p>Our signature buffet is an experience in itself. With a spread of over 20 dishes served fresh and hot, this is ideal for large celebrations. <strong>Minimum 50 packs required.</strong></p>
+            <ul>
+              <li>Starters, mains, breads, rice, desserts</li>
+              <li>Full buffet table setup & service</li>
+              <li>Delivery + on-site service available</li>
+              <li>Priced per pack (minimum 50)</li>
+            </ul>
+            <p class="service-note cta-note">✅ Bookings accepted online!</p>
+            <button class="btn btn-gold" onclick="showPage('order')">Book Buffet Service</button>
+          </div>
+        </div>
+
+        <div class="service-detail fade-in reverse">
+          <div class="service-detail-icon">🎉</div>
+          <div class="service-detail-body">
+            <h2>Events Catering</h2>
+            <p>From birthday parties and kitty parties to puja ceremonies, griha pravesh, and social functions — we cater to all personal celebrations with the same dedication we bring to grand events.</p>
+            <ul>
+              <li>Customisable menus for all budgets</li>
+              <li>Delivery, pickup, or full setup service</li>
+              <li>Short lead time accepted</li>
+              <li>Veg, Non-Veg, sweet boxes available</li>
+            </ul>
+            <p class="service-note cta-note">✅ Bookings accepted online!</p>
+            <button class="btn btn-gold" onclick="showPage('order')">Book Event Catering</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ PAGE: GALLERY ═══════════ -->
+  <main id="page-gallery" class="page">
+    <div class="page-hero-mini">
+      <div class="container">
+        <div class="section-label">Memories We Made</div>
+        <h1 class="page-hero-title">Our <em>Gallery</em></h1>
+        <p>A glimpse into the events we've crafted.</p>
+      </div>
+    </div>
+    <section class="section-pad">
+      <div class="container">
+        <div class="gallery-filters">
+          <button class="gal-filter active" onclick="filterGallery('all', this)">All</button>
+          <button class="gal-filter" onclick="filterGallery('wedding', this)">Wedding</button>
+          <button class="gal-filter" onclick="filterGallery('corporate', this)">Corporate</button>
+          <button class="gal-filter" onclick="filterGallery('buffet', this)">Buffet</button>
+          <button class="gal-filter" onclick="filterGallery('events', this)">Events</button>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Built by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ PAGE: ORDER / BOOKING ═══════════ -->
+  <main id="page-order" class="page">
+    <div class="page-hero-mini">
+      <div class="container">
+        <div class="section-label">Let's Plan Together</div>
+        <h1 class="page-hero-title">Book Your <em>Event</em></h1>
+        <p>Fill in the details below. We'll confirm within 24 hours.</p>
+      </div>
+    </div>
+
+    <section class="section-pad">
+      <div class="container order-container">
+
+        <!-- Step Indicator -->
+        <div class="steps-indicator">
+          <div class="step active" id="step-ind-1"><span>1</span> Details</div>
+          <div class="step-line"></div>
+          <div class="step" id="step-ind-2"><span>2</span> Menu</div>
+          <div class="step-line"></div>
+          <div class="step" id="step-ind-3"><span>3</span> Review</div>
+        </div>
+
+        <!-- Step 1: Contact & Event Details -->
+        <div id="order-step-1" class="order-step active">
+          <h2 class="step-title">Event Details</h2>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="o-name" placeholder="Your full name" />
+              <span class="field-error" id="err-name"></span>
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="o-phone" placeholder="10-digit mobile number" maxlength="10" />
+              <span class="field-error" id="err-phone"></span>
+            </div>
+            <div class="form-group full-width">
+              <label>Delivery / Event Address *</label>
+              <textarea id="o-address" placeholder="Full address with landmark, city, pincode" rows="3"></textarea>
+              <span class="field-error" id="err-address"></span>
+            </div>
+            <div class="form-group">
+              <label>Event Date *</label>
+              <input type="date" id="o-date" />
+              <span class="field-error" id="err-date"></span>
+            </div>
+            <div class="form-group">
+              <label>Time Slot *</label>
+              <select id="o-time">
+                <option value="">Select time slot</option>
+              </select>
+              <span class="field-error" id="err-time"></span>
+            </div>
+            <div class="form-group full-width">
+              <label>Service Type *</label>
+              <div class="service-radio-group">
+                <label class="radio-card">
+                  <input type="radio" name="service-type" value="delivery" />
+                  <span class="radio-card-inner">
+                    <strong>🚚 Delivery</strong>
+                    <small>We deliver to your address</small>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="service-type" value="pickup" />
+                  <span class="radio-card-inner">
+                    <strong>🏠 Pickup</strong>
+                    <small>Collect from our kitchen</small>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="service-type" value="buffet" />
+                  <span class="radio-card-inner">
+                    <strong>🍽️ Buffet Service</strong>
+                    <small>Full setup at your venue (min 50 packs)</small>
+                  </span>
+                </label>
+              </div>
+              <span class="field-error" id="err-service"></span>
+            </div>
+
+            <!-- Buffet packs field (shown conditionally) -->
+            <div class="form-group" id="buffet-packs-group" style="display:none;">
+              <label>Number of Packs (Buffet) *</label>
+              <input type="number" id="o-packs" placeholder="Minimum 50 packs" min="50" />
+              <span class="field-error" id="err-packs"></span>
+            </div>
+
+            <div class="form-group full-width">
+              <label>Additional Notes</label>
+              <textarea id="o-notes" placeholder="Dietary requirements, special requests, or anything else..." rows="2"></textarea>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn btn-gold" onclick="goToStep(2)">Next: Select Menu →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Menu Selection -->
+        <div id="order-step-2" class="order-step">
+          <h2 class="step-title">Select Your Menu</h2>
+          <p class="step-desc">Choose items from the menu below. All prices are per 1 kg.</p>
+
+          <div class="order-menu-tabs">
+            <button class="menu-tab active" onclick="switchOrderMenuTab('veg', this)">🥦 Veg</button>
+            <button class="menu-tab" onclick="switchOrderMenuTab('nonveg', this)">🍗 Non-Veg</button>
+          </div>
+
+          <div id="order-menu-veg" class="menu-panel active"><!-- JS --></div>
+          <div id="order-menu-nonveg" class="menu-panel"><!-- JS --></div>
+
+          <div class="order-running-total" id="order-running-total">
+            <span id="order-total-items">No items selected</span>
+            <strong id="order-total-price">₹0</strong>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn btn-ghost" onclick="goToStep(1)">← Back</button>
+            <button class="btn btn-gold" onclick="goToStep(3)">Review Order →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Review -->
+        <div id="order-step-3" class="order-step">
+          <h2 class="step-title">Review & Confirm</h2>
+          <div id="order-review-content"><!-- JS --></div>
+          <div class="step-actions">
+            <button class="btn btn-ghost" onclick="goToStep(2)">← Edit Menu</button>
+            <button class="btn btn-gold" onclick="submitOrder()">Confirm Booking ✓</button>
+          </div>
+        </div>
+
+        <!-- Success State -->
+        <div id="order-success" class="order-success" style="display:none;">
+          <div class="success-icon">✦</div>
+          <h2>Booking Received!</h2>
+          <p>Thank you! We've received your booking request. Our team will call you within <strong>24 hours</strong> to confirm.</p>
+          <p>For urgent queries, WhatsApp us at <strong>9518959489</strong>.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="https://wa.me/919518959489" target="_blank">WhatsApp Us</a>
+            <button class="btn btn-outline" onclick="showPage('home')">Back to Home</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ PAGE: CONTACT ═══════════ -->
+  <main id="page-contact" class="page">
+    <div class="page-hero-mini">
+      <div class="container">
+        <div class="section-label">Get In Touch</div>
+        <h1 class="page-hero-title">Contact <em>Us</em></h1>
+      </div>
+    </div>
+
+    <section class="section-pad">
+      <div class="container contact-layout">
+
+        <div class="contact-info">
+          <h2>We'd Love to Hear from You</h2>
+          <p>Call, WhatsApp, or email us. We typically respond within a few hours.</p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="cc-icon">📞</div>
+              <div class="cc-body">
+                <div class="cc-label">Call (Preferred)</div>
+                <a href="tel:9820445775" class="cc-value">9820445775</a>
+                <a href="tel:9820445775" class="btn btn-sm btn-gold mt-8">Call Now</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="cc-icon">📞</div>
+              <div class="cc-body">
+                <div class="cc-label">Alternate Numbers</div>
+                <a href="tel:9518959489" class="cc-value">9518959489</a>
+                <a href="tel:7738771711" class="cc-value">7738771711</a>
+                <div class="btn-row">
+                  <a href="tel:9518959489" class="btn btn-sm btn-outline">Call</a>
+                  <a href="tel:7738771711" class="btn btn-sm btn-outline">Call</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-card contact-card--wa">
+              <div class="cc-icon">💬</div>
+              <div class="cc-body">
+                <div class="cc-label">WhatsApp</div>
+                <span class="cc-value">9518959489</span>
+                <a href="https://wa.me/919518959489?text=Hello%20Classic%20Dishes!%20I'd%20like%20to%20enquire%20about%20catering." target="_blank" class="btn btn-sm btn-wa">Chat on WhatsApp</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="cc-icon">✉️</div>
+              <div class="cc-body">
+                <div class="cc-label">Email</div>
+                <a href="mailto:classicdishes@gmail.com" class="cc-value">classicdishes@gmail.com</a>
+                <a href="mailto:classicdishes@gmail.com" class="btn btn-sm btn-outline mt-8">Send Email</a>
+              </div>
+            </div>
+            <div class="contact-card contact-card--address">
+              <div class="cc-icon">📍</div>
+              <div class="cc-body">
+                <div class="cc-label">Kitchen Address</div>
+                <p class="cc-value cc-address">Room No. 4, Joseph Compound, D'Silva Wadi, Near JBCN School, Off L.M. Road, Dahisar West, Mumbai — 400068</p>
+                <a href="https://maps.google.com/?q=Dahisar+West+Mumbai+400068" target="_blank" class="btn btn-sm btn-outline mt-8">Open in Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h2>Send Us a Message</h2>
+          <div class="contact-form">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" id="cf-name" placeholder="Full name" />
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp *</label>
+              <input type="tel" id="cf-phone" placeholder="Your number" />
+            </div>
+            <div class="form-group">
+              <label>What's the Occasion?</label>
+              <select id="cf-occasion">
+                <option value="">Select</option>
+                <option>Wedding</option>
+                <option>Corporate Event</option>
+                <option>Buffet</option>
+                <option>Birthday / Party</option>
+                <option>Puja / Ceremony</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="cf-message" rows="4" placeholder="Tell us about your event..."></textarea>
+            </div>
+            <button class="btn btn-gold btn-full" onclick="submitContactForm()">Send Enquiry</button>
+            <p id="cf-success" style="display:none; color: var(--gold); text-align:center; margin-top:1rem; font-family: var(--font-serif);">✦ Message sent! We'll be in touch soon.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">✦</span>
+        <span class="logo-text"><span class="logo-name">Classic Dishes</span><em>Pvt Ltd</em></span>
+        <p>Premium catering services in Mumbai, built on flavour, trust and tradition.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('menu')">Menu</a>
+        <a href="#" onclick="showPage('services')">Services</a>
+        <a href="#" onclick="showPage('gallery')">Gallery</a>
+        <a href="#" onclick="showPage('order')">Book Event</a>
+        <a href="#" onclick="showPage('contact')">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="tel:9820445775">📞 9820445775</a>
+        <a href="https://wa.me/919518959489" target="_blank">💬 WhatsApp: 9518959489</a>
+        <a href="mailto:classicdishes@gmail.com">✉️ classicdishes@gmail.com</a>
+        <p>📍 Dahisar West, Mumbai 400068</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Classic Dishes Pvt Ltd.All rights reserved by RAJAK'S developer .</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════ STICKY MOBILE CTA ═══════════ -->
+  <div class="sticky-mobile-cta" id="sticky-mobile-cta">
+    <button class="sticky-btn sticky-btn--book" onclick="showPage('order')">📋 Book Now</button>
+    <a class="sticky-btn sticky-btn--wa" href="https://wa.me/919518959489?text=Hello%20Classic%20Dishes!%20I'd%20like%20to%20enquire%20about%20catering." target="_blank">💬 WhatsApp</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
